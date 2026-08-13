@@ -56,9 +56,9 @@ All logs are sent to systemd journal and viewable via `journalctl -u go-httpbin 
 
 ## Project Links
 
-- GitHub: https://github.com/community-scripts/go-httpbin
+- GitHub: https://github.com/mccutchen/go-httpbin
 - Original httpbin: https://httpbin.org
-- Documentation: https://github.com/community-scripts/go-httpbin#readme
+- Documentation: https://github.com/mccutchen/go-httpbin#readme
 
 ## Author
 

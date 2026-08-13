@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2026 Community Scripts Contributors
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/community-scripts/go-httpbin
+# Copyright (c) 2021-2026 tteck
+# Author: tteck (tteckster)
+# License: MIT | https://github.com/community-scripts/ProxmoxVED/raw/main/LICENSE
+# Source: https://github.com/mccutchen/go-httpbin
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
