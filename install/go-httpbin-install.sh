@@ -27,7 +27,9 @@ setup_go
 msg_ok "Go installed"
 
 msg_info "Cloning go-httpbin Repository"
-git clone --depth 1 https://github.com/mccutchen/go-httpbin.git /opt/go-httpbin
+# TESTING: Clone from fork with LOG_REQUEST feature
+# TODO BEFORE PR: Change back to https://github.com/mccutchen/go-httpbin.git
+git clone --depth 1 https://github.com/geekosphere-net/go-httpbin.git /opt/go-httpbin
 cd /opt/go-httpbin
 msg_ok "Repository cloned"
 
