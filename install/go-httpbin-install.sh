@@ -56,6 +56,8 @@ User=root
 WorkingDirectory=/opt/go-httpbin
 StandardOutput=journal
 StandardError=journal
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+$([ -n "$LOG_REQUEST" ] && echo "Environment=\"LOG_REQUEST=$LOG_REQUEST\"")
 
 [Install]
 WantedBy=multi-user.target
