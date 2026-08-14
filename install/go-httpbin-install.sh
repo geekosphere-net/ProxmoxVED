@@ -49,6 +49,8 @@ After=network.target
 
 [Service]
 Type=simple
+EnvironmentFile=-/opt/go-httpbin/.env
+ExecStartPre=/bin/bash -c "/bin/env > /opt/go-httpbin/.env; cat /proc/1/environ | tr '\0' '\n' >> /opt/go-httpbin/.env"
 ExecStart=/opt/go-httpbin/dist/go-httpbin -port 8080
 Restart=always
 RestartSec=10
@@ -56,8 +58,6 @@ User=root
 WorkingDirectory=/opt/go-httpbin
 StandardOutput=journal
 StandardError=journal
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-$([ -n "$LOG_REQUEST" ] && echo "Environment=\"LOG_REQUEST=$LOG_REQUEST\"")
 
 [Install]
 WantedBy=multi-user.target
